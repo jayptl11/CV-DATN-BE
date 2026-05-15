@@ -158,7 +158,8 @@ app.post('/api/apply', upload.single('cvFile'), async (req, res) => {
             return res.status(400).json({ error: 'Không tìm thấy file CV!' });
         }
 
-        const baseUrl = `${req.protocol}://${req.get('host')}`;
+        const proto = req.headers['x-forwarded-proto'] || req.protocol;
+        const baseUrl = `${proto}://${req.get('host')}`;
         const fileUrl = `${baseUrl}/uploads/${req.file.filename}`;
 
         const newCandidate = new Candidate({
