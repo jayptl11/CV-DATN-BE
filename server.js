@@ -85,16 +85,16 @@ function getPassEmailHTML(name, position) {
         <div style="background:#fff;padding:30px;border-radius:8px;border-left:4px solid #10b981;">
             <p style="font-size:16px;color:#333;">Xin chào <strong>${name}</strong>,</p>
             <p style="font-size:15px;color:#555;line-height:1.6;">
-                Chúng tôi rất vui mừng thông báo rằng bạn đã <strong style="color:#10b981;">ĐẠT</strong> vòng phỏng vấn cho vị trí <strong>${position}</strong> tại CARBON Billiards.
+                Chúng tôi rất vui mừng thông báo rằng bạn đã <strong style="color:#10b981;">ĐẠT</strong> vòng phỏng vấn cho vị trí <strong>${position}</strong> tại CARBON ATS.
             </p>
             <p style="font-size:15px;color:#555;line-height:1.6;">
                 Bộ phận Nhân sự sẽ liên hệ với bạn trong thời gian sớm nhất để trao đổi về các bước tiếp theo.
             </p>
             <p style="font-size:15px;color:#555;line-height:1.6;">
-                Trân trọng,<br><strong>Ban Nhân sự CARBON Billiards</strong>
+                Trân trọng,<br><strong>Ban Nhân sự CARBON ATS</strong>
             </p>
         </div>
-        <p style="text-align:center;color:#999;font-size:12px;margin-top:30px;">© 2026 CARBON Billiards. All rights reserved.</p>
+        <p style="text-align:center;color:#999;font-size:12px;margin-top:30px;">© 2026 CARBON ATS. All rights reserved.</p>
     </div>`;
 }
 
@@ -107,7 +107,7 @@ function getFailEmailHTML(name, position) {
         <div style="background:#fff;padding:30px;border-radius:8px;border-left:4px solid #e74c3c;">
             <p style="font-size:16px;color:#333;">Xin chào <strong>${name}</strong>,</p>
             <p style="font-size:15px;color:#555;line-height:1.6;">
-                Cảm ơn bạn đã dành thời gian tham gia phỏng vấn cho vị trí <strong>${position}</strong> tại CARBON Billiards.
+                Cảm ơn bạn đã dành thời gian tham gia phỏng vấn cho vị trí <strong>${position}</strong> tại CARBON ATS.
             </p>
             <p style="font-size:15px;color:#555;line-height:1.6;">
                 Sau khi cân nhắc kỹ lưỡng, chúng tôi rất tiếc phải thông báo rằng hồ sơ của bạn chưa phù hợp với yêu cầu vị trí này tại thời điểm hiện tại.
@@ -116,10 +116,10 @@ function getFailEmailHTML(name, position) {
                 Chúng tôi khuyến khích bạn theo dõi các cơ hội khác trong tương lai. Chúc bạn mọi điều tốt đẹp nhất!
             </p>
             <p style="font-size:15px;color:#555;line-height:1.6;">
-                Trân trọng,<br><strong>Ban Nhân sự CARBON Billiards</strong>
+                Trân trọng,<br><strong>Ban Nhân sự CARBON ATS</strong>
             </p>
         </div>
-        <p style="text-align:center;color:#999;font-size:12px;margin-top:30px;">© 2026 CARBON Billiards. All rights reserved.</p>
+        <p style="text-align:center;color:#999;font-size:12px;margin-top:30px;">© 2026 CARBON ATS. All rights reserved.</p>
     </div>`;
 }
 
@@ -198,7 +198,7 @@ app.post('/api/analyze-cv', upload.single('cvFile'), async (req, res) => {
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: 'gemini-2.5-pro' });
 
-        const prompt = `Đóng vai là Giám đốc Nhân sự của CARBON Billiards. Hãy phân tích chuyên sâu file CV đính kèm của ứng viên ${name} cho vị trí ${position}.
+        const prompt = `Đóng vai là Giám đốc Nhân sự của CARBON ATS. Hãy phân tích chuyên sâu file CV đính kèm của ứng viên ${name} cho vị trí ${position}.
 
 BẮT BUỘC chấm điểm (thang 100) dựa trên bộ tiêu chí sau:
 1. Kinh nghiệm chuyên môn (40 điểm): Khớp với yêu cầu cốt lõi của vị trí ${position}.
